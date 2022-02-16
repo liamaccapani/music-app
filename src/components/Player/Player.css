@@ -2,20 +2,26 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 3.5rem;
+  height: 4.5rem;
   background-color: #181818;
-  padding: 0.6rem;
-  z-index: 2;
+  padding: 0 .6rem 0 .6rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  /* flex-wrap: wrap; */
 }
+
+.album-song img {
+  height: 2rem;
+}
+
 .icons-playing-bar {
   display: flex; 
-  flex-direction: column;
+  flex-direction: column !important;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .icons {
@@ -24,14 +30,35 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  width: 25%;
 }
 
 .shuffle, .repeat {
   font-size: .9rem;
 }
 
-.volume-devices {
+.shuffle {
+  padding-right: 2rem;
+}
+
+.repeat {
+  padding-left: 2rem;
+}
+
+.playing-bar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  color: grey;
+}
+
+.playing-bar input {
+  width: 80%;
+}
+.volume-devices {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

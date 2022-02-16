@@ -5,7 +5,7 @@ const Home = () => {
     return (
       <>
        <Sidebar/>
-       <div>HOME</div>
+       {/* <div>HOME</div> */}
        <Player/>
       </>
     )
