@@ -15,10 +15,10 @@ function App() {
           exact
           render={(routerProps) => {
             return (
-              // <Layout>
+              // <Frame>
                 //{" "}
                 <Home {...routerProps}/>
-              // </Layout>
+              // </Frame>
             );
           }}
         />
@@ -27,9 +27,9 @@ function App() {
           path="/artist/:artistId"
           render={(routerProps) => {
             return (
-              // <Layout>
+              // <Frame>
                 <Artist {...routerProps}/>
-              // </Layout>
+              // </Frame>
             );
           }}
         />
@@ -38,10 +38,10 @@ function App() {
           path="/album/:albumId"
           render={(routerProps) => {
             return (
-              // <Layout>
+              // <Frame>
               // {" "}
                 <Album {...routerProps}/>
-              // </Layout>
+              // </Frame>
             );
           }}
         />

@@ -1,4 +1,7 @@
 import "./Sidebar.css";
+import { MdHomeFilled } from "react-icons/md";
+import { FiSearch } from "react-icons/fi"; 
+import { BiLibrary } from "react-icons/bi"; 
 
 const Sidebar = () => {
   return (
