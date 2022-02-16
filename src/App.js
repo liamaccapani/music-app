@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Album from "./pages/Album";
 import Artist from "./pages/Artist";
 import Home from "./pages/Home";
-import Frame from "./components/Frame";
+import Frame from "./components/./Frame/Frame";
 
 function App() {
   return (
