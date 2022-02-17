@@ -33,6 +33,10 @@
   width: 25%;
 }
 
+.icons:hover {
+  cursor: pointer;
+}
+
 .shuffle, .repeat {
   font-size: .9rem;
 }
