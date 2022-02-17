@@ -1,4 +1,4 @@
-import "./Home.css";
+import "./styles.css";
 import Grid from "@mui/material/Grid";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Player from "../components/Player/Player";

@@ -1,9 +1,8 @@
-import './App.css';
+import "./App.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Album from "./pages/Album";
 import Artist from "./pages/Artist";
 import Home from "./pages/Home";
-import Frame from "./components/./Frame/Frame";
 
 function App() {
   return (
@@ -14,43 +13,25 @@ function App() {
           path="/"
           exact
           render={(routerProps) => {
-            return (
-              // <Frame>
-                //{" "}
-                <Home {...routerProps}/>
-              // </Frame>
-            );
+            return <Home {...routerProps} />;
           }}
         />
         {/* ------- Artist ------- */}
         <Route
           path="/artist/:artistId"
           render={(routerProps) => {
-            return (
-              // <Frame>
-                <Artist {...routerProps}/>
-              // </Frame>
-            );
+            return <Artist {...routerProps} />;
           }}
         />
         {/* ------- Album ------- */}
         <Route
           path="/album/:albumId"
           render={(routerProps) => {
-            return (
-              // <Frame>
-              // {" "}
-                <Album {...routerProps}/>
-              // </Frame>
-            );
+            return <Album {...routerProps} />;
           }}
         />
         {/* ------- Default Case ------- */}
-        <Route
-          render={() => (
-            <h1>404 - NOT FOUND</h1>
-          )}
-        />
+        <Route render={() => <h1>404 - NOT FOUND</h1>} />
       </Switch>
     </Router>
   );

@@ -48,21 +48,4 @@ const Player = () => {
   );
 };
 
-// <div >
-//
-//   <div  >
-//
-//   </div>
-
-//
-//   <div  xs={12} md={6}>
-
-//   </div>
-
-//
-//   <div  xs={12} md={3}>
-//
-//   </div>
-// </div>
-
 export default Player;
