@@ -15,9 +15,9 @@ const Home = () => {
 
   const fetchPlaylists = async () => {
     let results = await getPlaylists();
-    console.log("Results", results);
+    // console.log("Results", results);
     setPlaylists(results.data);
-    console.log("Playlists", playlists);
+    // console.log("Playlists", playlists);
   };
 
   useEffect(() => {

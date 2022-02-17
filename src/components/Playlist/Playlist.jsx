@@ -24,8 +24,14 @@ const Playlist = ({ playlist }) => {
   return (
     <>
       <div className="playlist-card">
-        <img alt={playlist.title} src={playlist.picture_big} />
-        <PlayCircleFilledIcon className="play-album" />
+        <div className="cover">
+          <img alt={playlist.title} src={playlist.picture_big} />
+          <PlayCircleFilledIcon className="play-album-icon" fontSize="large" />
+        </div>
+        <div className="title">
+          Culo Culo
+          <p>Culetto</p>
+        </div>
       </div>
     </>
   );
