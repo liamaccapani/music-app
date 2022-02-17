@@ -2,3 +2,8 @@
 .whole-page {
   height: calc(100vh - 4.5rem);
 }
+
+/* Home page (right column) */
+.home-page {
+  background: linear-gradient(0deg, rgb(19, 19, 19) 60%, rgba(217,147,242,0.9416141456582633) 110%);
+}
