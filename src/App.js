@@ -17,12 +17,12 @@ function App() {
           }}
         />
         {/* ------- Artist ------- */}
-        <Route
+        {/* <Route
           path="/artist/:artistId"
           render={(routerProps) => {
             return <Artist {...routerProps} />;
           }}
-        />
+        /> */}
         {/* ------- Album ------- */}
         <Route
           path="/album/:albumId"

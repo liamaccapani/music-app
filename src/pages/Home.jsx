@@ -5,8 +5,10 @@ import Searchbar from "../components/Searchbar/Searchbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Player from "../components/Player/Player";
 import Playlist from "../components/Playlist/Playlist";
+import CircularProgress from '@mui/material/CircularProgress';
 //React
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 // Functions
 import { getPlaylists } from "../core/functions.js";
 
@@ -35,11 +37,13 @@ const Home = () => {
         <Grid item md={10} id="home-page">
           <Searchbar />
           {isLoading ? (
-            <div>LOADING....</div>
+            <CircularProgress color="inherit" />
           ) : (
             <div className="_playlists-container">
               {playlists.map((playlist) => (
-                <Playlist playlist={playlist} />
+                <Link to={`/album/${playlist.id}`}>
+                  <Playlist playlist={playlist} onClick={() => console.log("click")}/>
+                </Link>
               ))}
             </div>
           )}
