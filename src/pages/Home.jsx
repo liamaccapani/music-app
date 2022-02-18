@@ -11,13 +11,16 @@ import { useEffect, useState } from "react";
 import { getPlaylists } from "../core/functions.js";
 
 const Home = () => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
   const [playlists, setPlaylists] = useState([]);
 
   const fetchPlaylists = async () => {
     let results = await getPlaylists();
-    // console.log("Results", results);
+    console.log("Results", results);
     setPlaylists(results.data);
-    // console.log("Playlists", playlists);
+    setIsLoading(false);
+    console.log("Playlists", playlists);
   };
 
   useEffect(() => {
@@ -31,11 +34,15 @@ const Home = () => {
         </Grid>
         <Grid item md={10} className="home-page">
           <Searchbar />
-          <div>
-            {playlists.map((playlist) => (
-              <Playlist playlist={playlist}/>
-            ))}
-          </div>
+          {isLoading ? (
+            <div>LOADING....</div>
+          ) : (
+            <div>
+              {playlists.map((playlist) => (
+                <Playlist playlist={playlist} />
+              ))}
+            </div>
+          )}
         </Grid>
       </Grid>
       <Player />
