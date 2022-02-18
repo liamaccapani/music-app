@@ -8,12 +8,3 @@ export const getPlaylists = async () => {
   let playlists = response.data;
   return playlists;
 };
-
-// export const getPlaylists = async () => {
-//   let response = await fetch(
-//     "https://api.deezer.com/chart", 
-//     {mode: 'no-cors'}
-//   );
-//   let playlists = await response.json()
-//   return playlists;
-// };

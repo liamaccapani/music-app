@@ -4,9 +4,14 @@
 }
 
 /* Home page (right column) */
-.home-page {
+#home-page {
   background: linear-gradient(0deg, rgb(19, 19, 19) 60%, rgba(217,147,242,0.9416141456582633) 110%);
   overflow-y: scroll;
   height: calc(100vh - 4.5rem);
 }
 
+
+._playlist-container {
+  display: flex;
+  flex-wrap: wrap;
+}

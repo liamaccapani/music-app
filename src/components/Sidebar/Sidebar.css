@@ -7,6 +7,7 @@
   /* max-height: 1000px; */
   height: 100%;
   width: 100%;
+  color: #a0a0a0;
 }
 
 .menu {
@@ -20,10 +21,18 @@
 }
 
 .nav-item {
-  color: #a0a0a0;
   font-size: 1rem;
   margin-bottom: 1rem;
   width: 100%;
+}
+
+.nav-item a, .nav-item a:link, .nav-item a:visited {
+  text-decoration: none;
+  color: #a0a0a0; 
+}
+
+.nav-item a:hover {
+  color: white;
 }
 
 .nav-item:hover {

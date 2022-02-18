@@ -32,12 +32,12 @@ const Home = () => {
         <Grid item md={2}>
           <Sidebar />
         </Grid>
-        <Grid item md={10} className="home-page">
+        <Grid item md={10} id="home-page">
           <Searchbar />
           {isLoading ? (
             <div>LOADING....</div>
           ) : (
-            <div>
+            <div className="_playlists-container">
               {playlists.map((playlist) => (
                 <Playlist playlist={playlist} />
               ))}
