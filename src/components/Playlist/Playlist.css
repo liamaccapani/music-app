@@ -1,10 +1,14 @@
 .playlist-card {
   display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  /* z-index: 0; */
 }
 
 .playlist-card:hover {
   cursor: pointer;
-  /* Add animation */
+  /* transform: scale(1.5,1.5);
+  z-index: 4; */
 }
 
 .cover {
@@ -16,9 +20,8 @@
   border-radius: 8px;
   background-color: rgba(0, 0, 0, 0.08);
   position: relative;
-  margin-left: 10px;
   margin-bottom: 5px;
-  z-index: 1;
+  z-index: 4;
 }
 
 .cover img {
@@ -48,9 +51,27 @@
   z-index: 12;
 }
 
-.title {
-  font-size: 1rem;
+.text {
   color: white;
-  margin-left: 10px;
-  margin-bottom: 10px;
+}
+
+p {
+  margin: 0;
+}
+
+p:first-child {
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap; 
+  width: 150px; 
+  overflow: hidden;
+  text-overflow: ellipsis; 
+}
+
+p:nth-child(2){
+  font-size: .9rem;
+  white-space: nowrap; 
+  width: 150px; 
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

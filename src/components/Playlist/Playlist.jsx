@@ -28,9 +28,9 @@ const Playlist = ({ playlist }) => {
           <img alt={playlist.title} src={playlist.picture_big} />
           <PlayCircleFilledIcon className="play-album-icon" fontSize="large" />
         </div>
-        <div className="title">
-          Culo Culo
-          <p>Culetto</p>
+        <div className="text">
+          <p>{playlist.title}</p>
+          <p>{playlist.user.name}</p>
         </div>
       </div>
     </>
