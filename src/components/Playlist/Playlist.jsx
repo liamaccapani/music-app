@@ -20,7 +20,7 @@ import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 //   marginBottom: 10,
 // });
 
-const Playlist = ({ playlist }) => {
+const Playlist = ({ playlist, isLoading}) => {
   return (
     <>
       <div className="playlist-card">

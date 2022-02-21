@@ -1,11 +1,12 @@
 import "./styles.css";
 // MUI
 import Grid from "@mui/material/Grid";
+import CircularProgress from "@mui/material/CircularProgress";
+// Components
 import Searchbar from "../components/Searchbar/Searchbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Player from "../components/Player/Player";
 import Playlist from "../components/Playlist/Playlist";
-import CircularProgress from '@mui/material/CircularProgress';
 //React
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -42,7 +43,7 @@ const Home = () => {
             <div className="_playlists-container">
               {playlists.map((playlist) => (
                 <Link to={`/album/${playlist.id}`}>
-                  <Playlist playlist={playlist} onClick={() => console.log("click")}/>
+                  <Playlist playlist={playlist} isLoading={isLoading}/>
                 </Link>
               ))}
             </div>
