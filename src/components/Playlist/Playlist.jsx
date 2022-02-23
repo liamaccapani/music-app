@@ -3,6 +3,26 @@ import { styled } from "@mui/material/styles";
 // Icons
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 
+const Playlist = ({ playlist, isLoading}) => {
+
+  return (
+    <>
+      <div className="playlist-card">
+        <div className="cover">
+          <img alt={playlist.title} src={playlist.picture_big} />
+          <PlayCircleFilledIcon className="play-album-icon" fontSize="large" />
+        </div>
+        <div className="text">
+          <p>{playlist.title}</p>
+          <p>{playlist.user.name}</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Playlist;
+
 // const CoverImage = styled("div")({
 //   width: 150,
 //   height: 150,
@@ -19,26 +39,3 @@ import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 //   marginLeft: 10,
 //   marginBottom: 10,
 // });
-
-const Playlist = ({ playlist, isLoading}) => {
-  const setAlbumInfo = (playlist) => {
-    console.log(playlist.id)
-  }
-
-  return (
-    <>
-      <div className="playlist-card" onClick={() => setAlbumInfo(playlist)}>
-        <div className="cover">
-          <img alt={playlist.title} src={playlist.picture_big} />
-          <PlayCircleFilledIcon className="play-album-icon" fontSize="large" />
-        </div>
-        <div className="text">
-          <p>{playlist.title}</p>
-          <p>{playlist.user.name}</p>
-        </div>
-      </div>
-    </>
-  );
-};
-
-export default Playlist;

@@ -9,10 +9,10 @@ export const getPlaylists = async () => {
   return playlists;
 };
 
-export const getAlbum = async (playlistId) => {
+export const getPlaylistById = async (playlistId) => {
   let response = await axios.get(
     `http://localhost:8080/https://api.deezer.com/playlist/${playlistId}`
   );
-  let album = response.data;
-  return album;
+  let playlist = response.data;
+  return playlist;
 };

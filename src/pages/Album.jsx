@@ -8,17 +8,20 @@ import Sidebar from "../components/Sidebar/Sidebar";
 import Player from "../components/Player/Player";
 //React
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 // Functions
-import { getAlbum } from "../core/functions.js";
+import { getPlaylistById } from "../core/functions.js";
 
 const Album = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [album, setAlbum] = useState({});
 
+  const {albumId} = useParams();
+
   const fetchAlbum = async () => {
-    let results = await getAlbum("65489479");
+    let results = await getPlaylistById(albumId);
     console.log("Results", results);
-    setAlbum(results.data);
+    setAlbum(results)
     setIsLoading(false);
     console.log("Album", album);
   };
