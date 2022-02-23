@@ -6,7 +6,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Searchbar from "../components/Searchbar/Searchbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import Player from "../components/Player/Player";
-import Playlist from "../components/Playlist/Playlist";
+import PlaylistCard from "../components/Playlist/Playlist";
 //React
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -43,7 +43,7 @@ const Home = () => {
             <div className="_playlists-container">
               {playlists.map((playlist) => (
                 <Link to={`/album/${playlist.id}`}>
-                  <Playlist key={playlist.id} playlist={playlist} isLoading={isLoading}/>
+                  <PlaylistCard key={playlist.id} playlist={playlist} isLoading={isLoading}/>
                 </Link>
               ))}
             </div>

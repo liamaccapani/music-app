@@ -25,7 +25,7 @@ function App() {
         /> */}
         {/* ------- Album ------- */}
         <Route
-          path="/album/:albumId"
+          path="/album/:id"
           render={(routerProps) => {
             return <Album {...routerProps} />;
           }}

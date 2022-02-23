@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 // Icons
 import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 
-const Playlist = ({ playlist, isLoading}) => {
+const PlaylistCard = ({ playlist, isLoading}) => {
 
   return (
     <>
@@ -21,7 +21,7 @@ const Playlist = ({ playlist, isLoading}) => {
   );
 };
 
-export default Playlist;
+export default PlaylistCard;
 
 // const CoverImage = styled("div")({
 //   width: 150,

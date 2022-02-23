@@ -20,9 +20,60 @@
 }
 
 /* Album page (right column) */
-#album-page {
+#playlist-page {
   background-color: rgb(19, 19, 19);
   overflow-y: scroll;
   height: calc(100vh - 4.5rem);
   color: white;
+}
+ 
+._playlist-preview-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  padding-left: .9rem;
+  box-sizing: border-box;
+}
+
+  /* Same component, styled differently */
+._playlist-preview-container .playlist-card {
+  margin: 0;
+}
+
+._playlist-preview-container .cover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+
+.playlist-text {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-left: 1rem;
+}
+
+.playlist-text h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar span {
+  margin-left: 1rem;
 }
