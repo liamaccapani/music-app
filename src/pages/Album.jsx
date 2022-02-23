@@ -16,12 +16,12 @@ const Album = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [album, setAlbum] = useState({});
 
-  const {albumId} = useParams();
+  const { albumId } = useParams();
 
   const fetchAlbum = async () => {
     let results = await getPlaylistById(albumId);
     console.log("Results", results);
-    setAlbum(results)
+    setAlbum(results);
     setIsLoading(false);
     console.log("Album", album);
   };
@@ -38,7 +38,20 @@ const Album = () => {
         </Grid>
         <Grid item md={10} id="album-page">
           <Searchbar />
-          {isLoading ? <CircularProgress color="inherit" /> : <div>ALBUM</div>}
+          {isLoading ? (
+            <CircularProgress color="inherit" />
+          ) : (
+            <>
+              <h1>{album.title}</h1>
+              <p>{album.description}</p>
+              {album.tracks.data.map((track) => (
+                <div>
+                  <h3>{track.title}</h3>
+                  <p>{track.artist.name}</p>
+                </div>
+              ))}
+            </>
+          )}
         </Grid>
       </Grid>
       <Player />
