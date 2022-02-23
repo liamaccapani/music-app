@@ -43,7 +43,7 @@ const Home = () => {
             <div className="_playlists-container">
               {playlists.map((playlist) => (
                 <Link to={`/album/${playlist.id}`}>
-                  <Playlist playlist={playlist} isLoading={isLoading}/>
+                  <Playlist key={playlist.id} playlist={playlist} isLoading={isLoading}/>
                 </Link>
               ))}
             </div>

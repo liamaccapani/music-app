@@ -21,9 +21,13 @@ import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 // });
 
 const Playlist = ({ playlist, isLoading}) => {
+  const setAlbumInfo = (playlist) => {
+    console.log(playlist.id)
+  }
+
   return (
     <>
-      <div className="playlist-card">
+      <div className="playlist-card" onClick={() => setAlbumInfo(playlist)}>
         <div className="cover">
           <img alt={playlist.title} src={playlist.picture_big} />
           <PlayCircleFilledIcon className="play-album-icon" fontSize="large" />
