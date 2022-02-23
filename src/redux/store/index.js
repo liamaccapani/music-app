@@ -6,33 +6,6 @@ import { encryptTransform } from "redux-persist-transform-encrypt";
 // Reducer
 import playlistReducer from "../reducers/playlistReducer.js";
 
-// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-
-// const persistConfig = {
-//   key: "root",
-//   storage: localStorage,
-//   transforms: [
-//     encryptTransform({
-//       secretKey: process.env.REACT_APP_SECRET_KEY,
-//       onError: (error) => {
-//         console.log(error);
-//       },
-//     }),
-//   ],
-// };
-
-// const persistedReducer = persistReducer(persistConfig, playlistReducer);
-
-// const configureStore = createStore(
-//   persistedReducer,
-//   initialState,
-//   composeEnhancers(applyMiddleware(thunk))
-// );
-
-// const persistor = persistStore(configureStore);
-
-// export { configureStore, persistor };
-
 export const initialState = {
   playlist: {
     playlistData: {
@@ -61,10 +34,37 @@ export const initialState = {
   },
 };
 
+// No persistor
 export const configureStore = createStore(
   playlistReducer,
   initialState,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-// export default configureStore
+// Persistor
+// const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+// const persistConfig = {
+//   key: "root",
+//   storage: localStorage,
+//   transforms: [
+//     encryptTransform({
+//       secretKey: process.env.REACT_APP_SECRET_KEY,
+//       onError: (error) => {
+//         console.log(error);
+//       },
+//     }),
+//   ],
+// };
+
+// const persistedReducer = persistReducer(persistConfig, playlistReducer);
+
+// const configureStore = createStore(
+//   persistedReducer,
+//   initialState,
+//   composeEnhancers(applyMiddleware(thunk))
+// );
+
+// const persistor = persistStore(configureStore);
+
+// export { configureStore, persistor };
