@@ -112,6 +112,10 @@
   margin-bottom: 1rem;
 }
 
+.single-track:hover {
+  background-color: rgb(38, 38, 54);
+}
+
 .single-track img {
   width: 5%;
   border-radius: 5px;
