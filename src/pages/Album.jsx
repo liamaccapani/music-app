@@ -88,17 +88,6 @@ const Album = () => {
                 </div>
               </div>
               <div className="_tracks-container">
-                {/* <div className="single-track">
-                  <img src={playlist.tracks.data[0].album.cover_small} alt="album cover"/>
-                  <p className="title">{playlist.tracks.data[0].title}</p>
-                  <div className="icons">
-                    <BiMicrophone />
-                    <BiHeart />
-                    <BiDotsHorizontalRounded />
-                  </div>
-                  <p className="artist">{playlist.tracks.data[0].artist.name}</p>
-                  <span>{playlist.tracks.data[0].duration}</span>
-                </div> */}
                 {playlist.tracks.data.map((track) => (
                   <div className="single-track">
                     <img
