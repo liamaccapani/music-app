@@ -1,5 +1,10 @@
 import "./styles.css";
-import { BiHeart } from "react-icons/bi";
+import {
+  BiDotsHorizontalRounded,
+  BiHeart,
+  BiMicrophone,
+  BiShare,
+} from "react-icons/bi";
 // MUI
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
@@ -74,20 +79,44 @@ const Album = () => {
                       <BiHeart />
                     </Fab>
                     <Fab size="small" sx={{ mr: 1 }}>
-                      <BiHeart />
+                      <BiShare />
                     </Fab>
                     <Fab size="small">
-                      <BiHeart />
+                      <BiDotsHorizontalRounded />
                     </Fab>
                   </div>
                 </div>
               </div>
               <div className="_tracks-container">
-                <div>
-                  {playlist.tracks.data.map((track) => {
-                    <p className="single-track">{track.title}</p>;
-                  })}
-                </div>
+                {/* <div className="single-track">
+                  <img src={playlist.tracks.data[0].album.cover_small} alt="album cover"/>
+                  <p className="title">{playlist.tracks.data[0].title}</p>
+                  <div className="icons">
+                    <BiMicrophone />
+                    <BiHeart />
+                    <BiDotsHorizontalRounded />
+                  </div>
+                  <p className="artist">{playlist.tracks.data[0].artist.name}</p>
+                  <span>{playlist.tracks.data[0].duration}</span>
+                </div> */}
+                {playlist.tracks.data.map((track) => (
+                  <div className="single-track">
+                    <img
+                      src={track.album.cover_small}
+                      alt="album cover"
+                    />
+                    <p className="title">{track.title}</p>
+                    <div className="icons">
+                      <BiMicrophone />
+                      <BiHeart />
+                      <BiDotsHorizontalRounded />
+                    </div>
+                    <p className="artist">
+                      {track.artist.name}
+                    </p>
+                    <span>{track.duration}</span>
+                  </div>
+                ))}
               </div>
             </>
           )}
