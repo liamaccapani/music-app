@@ -1,8 +1,10 @@
 import "./styles.css";
+import { BiHeart } from "react-icons/bi";
 // MUI
-import Avatar from '@mui/material/Avatar';
+import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
 import CircularProgress from "@mui/material/CircularProgress";
+import Fab from "@mui/material/Fab";
 // Components
 import Searchbar from "../components/Searchbar/Searchbar";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -50,15 +52,43 @@ const Album = () => {
                   </div>
                 </div>
                 <div className="playlist-text">
-                  <h1>{playlist.title}</h1>
+                  <h2>{playlist.title}</h2>
                   <div className="avatar">
-                    <Avatar alt="avatar" />
+                    <Avatar alt="avatar" sx={{ width: 25, height: 25 }} />
                     <span>{playlist.creator.name}</span>
                   </div>
                   <p>{playlist.description}</p>
+                  <p>
+                    {playlist.tracks.data.length} brani - {playlist.fans} fans
+                  </p>
+                  <div className="_buttons-container">
+                    <Fab
+                      variant="extended"
+                      size="small"
+                      color="secondary"
+                      sx={{ mr: 1 }}
+                    >
+                      ASCOLTA
+                    </Fab>
+                    <Fab size="small" sx={{ mr: 1 }}>
+                      <BiHeart />
+                    </Fab>
+                    <Fab size="small" sx={{ mr: 1 }}>
+                      <BiHeart />
+                    </Fab>
+                    <Fab size="small">
+                      <BiHeart />
+                    </Fab>
+                  </div>
                 </div>
               </div>
-              <div className="_tracks-container"></div>
+              <div className="_tracks-container">
+                <div>
+                  {playlist.tracks.data.map((track) => {
+                    <p className="single-track">{track.title}</p>;
+                  })}
+                </div>
+              </div>
             </>
           )}
         </Grid>
