@@ -16,7 +16,7 @@ const Player = () => {
     <Grid container spacing={1} className="player">
       {/* Album and song */}
       <Grid item xs={12} md={3} className="album-song">
-        <img src="./spotify-logo.png" alt="spotify logo" />
+        <img src="./deezer-logo.png" alt="deezer logo" />
       </Grid>
 
       {/* Icons and playing bar */}
