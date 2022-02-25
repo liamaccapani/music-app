@@ -41,6 +41,7 @@ const Home = () => {
             <CircularProgress color="inherit" />
           ) : (
             <div className="_playlists-container">
+              <h1>Le migliori playlist pop</h1>
               {playlists.map((playlist) => (
                 <Link to={`/album/${playlist.id}`}>
                   <PlaylistCard key={playlist.id} playlist={playlist} isLoading={isLoading}/>

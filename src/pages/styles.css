@@ -12,11 +12,14 @@
   );
   overflow-y: scroll;
   height: calc(100vh - 4.5rem);
+  color: white;
 }
 
-._playlist-container {
-  display: flex;
-  flex-wrap: wrap;
+._playlists-container {
+  /* display: flex;
+  flex-wrap: wrap; */
+  padding-left: .9rem;
+  padding-right: .9rem;
 }
 
 /* Album page (right column) */
