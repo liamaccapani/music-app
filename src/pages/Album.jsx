@@ -5,6 +5,7 @@ import {
   BiMicrophone,
   BiShare,
 } from "react-icons/bi";
+import { HiOutlineClock } from "react-icons/hi";
 // MUI
 import Avatar from "@mui/material/Avatar";
 import Grid from "@mui/material/Grid";
@@ -87,24 +88,31 @@ const Album = () => {
                   </div>
                 </div>
               </div>
-              <div className="_tracks-container">
-                {playlist.tracks.data.map((track) => (
-                  <div className="single-track">
-                    <img src={track.album.cover_small} alt="album cover" />
-                    <p className="title">{track.title}</p>
-                    <div className="icons">
-                      <BiMicrophone />
-                      <BiHeart />
-                      <BiDotsHorizontalRounded />
+              <div className="whole-container-padding">
+                <div className="tracks-upper">
+                  <p>BRANO</p>
+                  <p>ARTISTA</p>
+                  <HiOutlineClock className="clock"/>
+                </div>
+                <div className="_tracks-container">
+                  {playlist.tracks.data.map((track) => (
+                    <div className="single-track">
+                      <img src={track.album.cover_small} alt="album cover" />
+                      <p className="title">{track.title}</p>
+                      <div className="icons">
+                        <BiMicrophone />
+                        <BiHeart />
+                        <BiDotsHorizontalRounded />
+                      </div>
+                      <p className="artist">{track.artist.name}</p>
+                      <span>
+                        {("0" + Math.floor(track.duration / 60)).slice(-2) +
+                          ":" +
+                          ("0" + Math.floor(track.duration % 60)).slice(-2)}
+                      </span>
                     </div>
-                    <p className="artist">{track.artist.name}</p>
-                    <span>
-                      {("0" + Math.floor(track.duration / 60)).slice(-2) +
-                        ":" +
-                        ("0" + Math.floor(track.duration % 60)).slice(-2)}
-                    </span>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             </>
           )}
