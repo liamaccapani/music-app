@@ -90,20 +90,19 @@ const Album = () => {
               <div className="_tracks-container">
                 {playlist.tracks.data.map((track) => (
                   <div className="single-track">
-                    <img
-                      src={track.album.cover_small}
-                      alt="album cover"
-                    />
+                    <img src={track.album.cover_small} alt="album cover" />
                     <p className="title">{track.title}</p>
                     <div className="icons">
                       <BiMicrophone />
                       <BiHeart />
                       <BiDotsHorizontalRounded />
                     </div>
-                    <p className="artist">
-                      {track.artist.name}
-                    </p>
-                    <span>{track.duration}</span>
+                    <p className="artist">{track.artist.name}</p>
+                    <span>
+                      {("0" + Math.floor(track.duration / 60)).slice(-2) +
+                        ":" +
+                        ("0" + Math.floor(track.duration % 60)).slice(-2)}
+                    </span>
                   </div>
                 ))}
               </div>
