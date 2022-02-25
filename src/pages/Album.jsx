@@ -117,14 +117,3 @@ const Album = () => {
 };
 
 export default Album;
-
-{
-  /* <h1>{album.title}</h1>
-      <p>{album.description}</p>
-      {album.tracks.data.map((track) => (
-      <div>
-        <h3>{track.title}</h3>
-        <p>{track.artist.name}</p>
-      </div>
-    ))} */
-}

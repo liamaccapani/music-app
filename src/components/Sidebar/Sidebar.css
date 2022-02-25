@@ -4,7 +4,6 @@
   box-sizing: border-box;
   padding-top: 2rem;
   padding-left: 1rem;
-  /* max-height: 1000px; */
   height: 100%;
   width: 100%;
   color: #a0a0a0;
@@ -60,3 +59,11 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #888;
 }
+
+
+/*
+---- Nav item Home
+
+---- Text
+
+*/
