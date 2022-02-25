@@ -29,10 +29,8 @@ const Album = () => {
 
   const fetchAlbum = async () => {
     let results = await getPlaylistById(id);
-    console.log("Results", results);
     setPlaylist(results);
     setIsLoading(false);
-    console.log("Album", playlist);
   };
 
   useEffect(() => {

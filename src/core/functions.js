@@ -1,5 +1,4 @@
 import axios from "axios";
-// import { AxiosResponse, AxiosError } from "axios";
 
 export const getPlaylists = async () => {
   let response = await axios.get(

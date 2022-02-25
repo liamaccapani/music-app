@@ -20,10 +20,8 @@ const Home = () => {
 
   const fetchPlaylists = async () => {
     let results = await getPlaylists();
-    console.log("Results", results);
     setPlaylists(results.data);
     setIsLoading(false);
-    console.log("Playlists", playlists);
   };
 
   useEffect(() => {
